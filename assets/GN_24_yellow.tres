@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://beb3vnj608ut7"]
+
+[ext_resource type="FontFile" uid="uid://cnpno2k1hvpht" path="res://assets/fonts/The Led Display St.ttf" id="1_u4ghb"]
+
+[resource]
+font = ExtResource("1_u4ghb")
+font_size = 24
+font_color = Color(1, 1, 0.603922, 1)

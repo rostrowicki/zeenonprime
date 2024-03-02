@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcocrqm1bubyv"]
+
+[ext_resource type="Texture2D" uid="uid://dj7sapq7innug" path="res://assets/backgrounds/GalaxyUno.png" id="1_1871u"]
+[ext_resource type="Texture2D" uid="uid://clnkt4t3y107e" path="res://assets/backgrounds/spr_stars01.png" id="2_uwhq1"]
+[ext_resource type="Texture2D" uid="uid://vj4up5a0r3gd" path="res://assets/backgrounds/spr_stars02.png" id="3_h7x3g"]
+[ext_resource type="FontFile" uid="uid://1snvkjuahg4l" path="res://assets/fonts/SPACEMAN.TTF" id="4_cewru"]
+[ext_resource type="Texture2D" uid="uid://b1giqx4fwiofd" path="res://assets/ui/blue_button00.png" id="5_m4v0k"]
+[ext_resource type="Texture2D" uid="uid://db0umg6i5n8j4" path="res://assets/ui/yellow_button00.png" id="6_1yd2c"]
+[ext_resource type="Texture2D" uid="uid://d4ldvvmeyheo7" path="res://assets/ui/green_button00.png" id="7_s1x5t"]
+[ext_resource type="LabelSettings" uid="uid://beb3vnj608ut7" path="res://assets/GN_24_yellow.tres" id="8_sst40"]
+[ext_resource type="PackedScene" uid="uid://b6nl4ggerulow" path="res://sun/sun.tscn" id="9_6pm1l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mwggk"]
+font = ExtResource("4_cewru")
+font_size = 56
+font_color = Color(0.945098, 0.458824, 0.172549, 1)
+outline_size = 8
+outline_color = Color(0.2, 0.478431, 0.658824, 1)
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1871u")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uwhq1")
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_h7x3g")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "ZEENON
+prime"
+label_settings = SubResource("LabelSettings_mwggk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4v0k")
+texture_pressed = ExtResource("6_1yd2c")
+texture_hover = ExtResource("7_s1x5t")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PLAY"
+label_settings = ExtResource("8_sst40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_m4v0k")
+texture_pressed = ExtResource("6_1yd2c")
+texture_hover = ExtResource("7_s1x5t")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/ExitButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXIT"
+label_settings = ExtResource("8_sst40")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sun" parent="." instance=ExtResource("9_6pm1l")]
+position = Vector2(24, 24)
+scale = Vector2(0.3, 0.3)
