@@ -10,6 +10,7 @@ height = 96.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_krh6y")
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
