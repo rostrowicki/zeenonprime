@@ -1,10 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4bp47jnih4p8"]
+[gd_scene load_steps=7 format=3 uid="uid://d4bp47jnih4p8"]
 
 [ext_resource type="Texture2D" uid="uid://bke8805j7ak2u" path="res://assets/ship/base.png" id="1_krh6y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwhwh"]
 radius = 24.0
 height = 96.0
+
+[sub_resource type="Animation" id="Animation_diwnr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_twp3x"]
+resource_name = "fly"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_oouwq"]
+resource_name = "turn"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txmt4"]
+_data = {
+"RESET": SubResource("Animation_diwnr"),
+"fly": SubResource("Animation_twp3x"),
+"turn": SubResource("Animation_oouwq")
+}
 
 [node name="Player" type="CharacterBody2D"]
 
@@ -15,3 +71,9 @@ hframes = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CapsuleShape2D_bwhwh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fly"
+libraries = {
+"": SubResource("AnimationLibrary_txmt4")
+}
