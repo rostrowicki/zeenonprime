@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4bp47jnih4p8"]
+[gd_scene load_steps=8 format=3 uid="uid://d4bp47jnih4p8"]
 
+[ext_resource type="Script" path="res://player/player.gd" id="1_3bt1h"]
 [ext_resource type="Texture2D" uid="uid://bke8805j7ak2u" path="res://assets/ship/base.png" id="1_krh6y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwhwh"]
@@ -62,7 +63,8 @@ _data = {
 "turn": SubResource("Animation_oouwq")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="Area2D"]
+script = ExtResource("1_3bt1h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_krh6y")
