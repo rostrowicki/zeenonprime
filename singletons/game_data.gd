@@ -1,11 +1,9 @@
 extends Node
 
+enum ENEMY_TYPE { ZIPPER, BIO, BOMBER }
+enum POWERUP_TYPE { HEALTH, SHIELD }
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+const POWER_UPS = {
+	POWERUP_TYPE.HEALTH: preload("res://assets/misc/powerupGreen_bolt.png"),
+	POWERUP_TYPE.SHIELD: preload("res://assets/misc/shield_gold.png")
+}
