@@ -1,6 +1,6 @@
 extends Node
 
-enum ENEMY_TYPE { ZIPPER, BIO, BOMBER, TEST }
+enum ENEMY_TYPE { ZIPPER, BIO, BOMBER }
 enum POWERUP_TYPE { HEALTH, SHIELD }
 
 const POWER_UPS = {
