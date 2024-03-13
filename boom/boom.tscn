@@ -48,13 +48,14 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sxots")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
 
 [node name="Boom" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_v6hhn")
+autoplay = "default"
 script = ExtResource("2_dwerj")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]

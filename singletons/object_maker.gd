@@ -1,9 +1,10 @@
 extends Node
 
-enum SCENE_KEY { EXPLOSION }
+enum SCENE_KEY { EXPLOSION, BOOM }
 
 const SIMPLE_SCENES = {
-	SCENE_KEY.EXPLOSION: preload("res://explosion/explosion.tscn")
+	SCENE_KEY.EXPLOSION: preload("res://explosion/explosion.tscn"),
+	SCENE_KEY.BOOM: preload("res://boom/boom.tscn")
 }
 
 func add_child_deferred(child_to_add) -> void:
@@ -20,3 +21,6 @@ func create_simple_scene(start_pos: Vector2, key: SCENE_KEY) -> void:
 
 func create_explosion(start_pos: Vector2) -> void:
 	create_simple_scene(start_pos, SCENE_KEY.EXPLOSION)
+
+func create_boom(start_pos: Vector2) -> void:
+	create_simple_scene(start_pos, SCENE_KEY.BOOM)
