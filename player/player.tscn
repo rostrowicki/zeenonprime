@@ -63,7 +63,7 @@ _data = {
 "turn": SubResource("Animation_oouwq")
 }
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="Area2D" groups=["player"]]
 script = ExtResource("1_3bt1h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
