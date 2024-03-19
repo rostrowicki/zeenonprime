@@ -317,6 +317,7 @@ script = ExtResource("1_s8xhi")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_om65y")
 animation = &"bomber_3"
+flip_v = true
 
 [node name="LaserTimer" type="Timer" parent="."]
 one_shot = true
