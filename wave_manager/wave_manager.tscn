@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdgfbvpfetkqv"]
+
+[sub_resource type="Curve2D" id="Curve2D_mycrn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 228, -79, 0, 0, 0, 0, 233, 495)
+}
+point_count = 2
+
+[node name="WaveManager" type="Node2D"]
+
+[node name="Paths" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_mycrn")
