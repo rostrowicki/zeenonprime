@@ -12,13 +12,14 @@ var _player_ref: Player
 var _speed: float = 0.0
 var _can_shoot: bool = false
 var _dead: bool = false
+var _anim_string: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_player_ref = get_tree().get_first_node_in_group(GameData.GROUP_PLAYER)
 	if !_player_ref:
 		queue_free()
-	animated_sprite_2d.play()
+	animated_sprite_2d.play(_anim_string)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,7 +32,7 @@ func _process(delta):
 
 func setup(speed: float, anim_name: String) -> void:
 	_speed = speed
-	animated_sprite_2d.animation = anim_name
+	_anim_string = anim_name
 
 func _on_laser_timer_timeout():
 	pass # Replace with function body.

@@ -312,6 +312,7 @@ animations = [{
 }]
 
 [node name="EnemyBasic" type="PathFollow2D"]
+rotates = false
 script = ExtResource("1_s8xhi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
