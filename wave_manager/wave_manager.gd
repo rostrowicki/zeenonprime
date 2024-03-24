@@ -22,8 +22,8 @@ func _ready():
 	spawn_wave()
 
 func create_enemy(speed: float, anim_name: String, enemy_type: GameData.ENEMY_TYPE) -> Node:
-	var new_enemy = ENEMY_SCENES[enemy_type].instatiate()
-	new_enemy.setupe(speed, anim_name)
+	var new_enemy = ENEMY_SCENES[enemy_type].instantiate()
+	new_enemy.setup(speed, anim_name)
 	return new_enemy	
 
 func spawn_wave() -> void:
@@ -33,7 +33,7 @@ func spawn_wave() -> void:
 	
 	for num in range(4):
 		path.add_child(create_enemy(0.2, anim, enemy_type))
-		await get_tree().creat_timer(1).timeout #wait 1 second before loop continues
+		await get_tree().create_timer(1).timeout #wait 1 second before loop continues
 
 # spawn wave every SpawnTimer.X seconds
 func _on_spawn_timer_timeout():
