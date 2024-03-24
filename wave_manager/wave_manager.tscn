@@ -22,3 +22,5 @@ curve = SubResource("Curve2D_mycrn")
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 6.0
 autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
