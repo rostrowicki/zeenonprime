@@ -33,6 +33,7 @@ func spawn_wave() -> void:
 	
 	for num in range(4):
 		path.add_child(create_enemy(0.2, anim, enemy_type))
+		print('create enemy')
 		await get_tree().create_timer(1).timeout #wait 1 second before loop continues
 
 # spawn wave every SpawnTimer.X seconds
