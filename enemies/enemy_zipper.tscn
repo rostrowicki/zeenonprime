@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpqbchf0dnys2"]
+[gd_scene load_steps=3 format=3 uid="uid://cpqbchf0dnys2"]
 
 [ext_resource type="PackedScene" uid="uid://dfdv36s3i821d" path="res://enemies/enemy_basic.tscn" id="1_0pr50"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mdijl"]
+radius = 11.0
+height = 42.0
 
 [node name="EnemyZipper" instance=ExtResource("1_0pr50")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"zipeer_1"
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(-9.53674e-07, 4)
+scale = Vector2(2, 1.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 3)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_mdijl")
