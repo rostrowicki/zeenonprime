@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4bp47jnih4p8"]
+[gd_scene load_steps=9 format=3 uid="uid://d4bp47jnih4p8"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_3bt1h"]
 [ext_resource type="Texture2D" uid="uid://bke8805j7ak2u" path="res://assets/ship/base.png" id="1_krh6y"]
+[ext_resource type="PackedScene" uid="uid://bhbp5wjuo1v6r" path="res://base_bullet/player_bullet/player_bullet.tscn" id="2_bt7ye"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwhwh"]
 radius = 24.0
@@ -65,6 +66,7 @@ _data = {
 
 [node name="Player" type="Area2D" groups=["player"]]
 script = ExtResource("1_3bt1h")
+bullet_scene = ExtResource("2_bt7ye")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_krh6y")

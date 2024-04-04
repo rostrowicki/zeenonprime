@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://chtygwg108i1x"]
+[gd_scene load_steps=8 format=3 uid="uid://chtygwg108i1x"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_kxa72"]
 [ext_resource type="PackedScene" uid="uid://digslbvxagti1" path="res://level_bg/level_bg.tscn" id="2_c8ejc"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://blyycs51vwmft" path="res://enemies/enemy_bio.tscn" id="5_5xuqq"]
 [ext_resource type="PackedScene" uid="uid://baburivq3vy05" path="res://enemies/enemy_bomber.tscn" id="6_bxg1u"]
 [ext_resource type="PackedScene" uid="uid://cpqbchf0dnys2" path="res://enemies/enemy_zipper.tscn" id="7_i4jcp"]
-[ext_resource type="PackedScene" uid="uid://bhbp5wjuo1v6r" path="res://base_bullet/player_bullet/player_bullet.tscn" id="8_36sle"]
-[ext_resource type="PackedScene" uid="uid://ds4crjht8eap4" path="res://base_bullet/enemy_bullet/enemy_bullet.tscn" id="9_o8mhe"]
-[ext_resource type="PackedScene" uid="uid://d3tyomcbkmqqy" path="res://base_bullet/enemy_bomb/enemy_bomb.tscn" id="10_o1acn"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kxa72")
@@ -30,12 +27,3 @@ position = Vector2(350, 51)
 
 [node name="EnemyZipper" parent="." instance=ExtResource("7_i4jcp")]
 position = Vector2(450, 47)
-
-[node name="PlayerBullet" parent="." instance=ExtResource("8_36sle")]
-position = Vector2(230, 619)
-
-[node name="EnemyBullet" parent="." instance=ExtResource("9_o8mhe")]
-position = Vector2(262, 569)
-
-[node name="EnemyBomb" parent="." instance=ExtResource("10_o1acn")]
-position = Vector2(338, 601)
