@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://blyycs51vwmft"]
+[gd_scene load_steps=4 format=3 uid="uid://blyycs51vwmft"]
 
 [ext_resource type="PackedScene" uid="uid://dfdv36s3i821d" path="res://enemies/enemy_basic.tscn" id="1_kh3yw"]
+[ext_resource type="PackedScene" uid="uid://ds4crjht8eap4" path="res://base_bullet/enemy_bullet/enemy_bullet.tscn" id="2_bu4j4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oh42a"]
 radius = 11.0
@@ -8,6 +9,8 @@ height = 40.0
 
 [node name="EnemyBio" instance=ExtResource("1_kh3yw")]
 shoots = true
+aims_at_player = true
+bullet_scene = ExtResource("2_bu4j4")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"biomech_1"
