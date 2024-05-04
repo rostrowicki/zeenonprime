@@ -22,6 +22,11 @@ scale = Vector2(0.56, 0.56)
 
 [node name="EnemyBio" parent="." instance=ExtResource("5_5xuqq")]
 position = Vector2(258, 46)
+bullet_damage = 10
+bullet_speed = 200.0
+bullet_direction = Vector2(0, 1)
+bullet_wait_time = 3.0
+bullet_wait_time_var = 0.05
 
 [node name="EnemyZipper" parent="." instance=ExtResource("7_i4jcp")]
 position = Vector2(450, 47)

@@ -11,6 +11,7 @@ height = 40.0
 shoots = true
 aims_at_player = true
 bullet_scene = ExtResource("2_bu4j4")
+bullet_wait_time_var = 0.1
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &"biomech_1"

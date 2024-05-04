@@ -50,10 +50,11 @@ func update_bullet_direction() -> void:
 	
 
 func start_shoot_timer() -> void:
-	laser_timer.wait_time = randf_range(
-		bullet_wait_time - bullet_wait_time_var, 
-		bullet_wait_time + bullet_wait_time_var)
-	laser_timer.start()
+	Utils.set_and_start_timer(
+		laser_timer,
+		bullet_wait_time,
+		bullet_wait_time_var
+	)
 
 
 func shoot() -> void:
