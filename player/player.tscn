@@ -81,3 +81,5 @@ autoplay = "fly"
 libraries = {
 "": SubResource("AnimationLibrary_txmt4")
 }
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
