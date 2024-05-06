@@ -18,3 +18,9 @@ animation = &"biomech_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("CapsuleShape2D_oh42a")
+
+[node name="HealthBar" parent="." index="5"]
+offset_left = -10.0
+offset_top = -28.0
+offset_right = 10.0
+offset_bottom = -26.0
